@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app" class="container mt-5"> 
+        <div>
+            <p :class="['p-3', 'text-white', fondo]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione soluta natus, 
+                illo aut quidem delectus tenetur, obcaecati laudantium illum impedit 
+                ipsam consequatur alias eaque! Atque veniam repudiandae nihil commodi!
+            </p>
+            <input type="text" class="form-control my-3" v-model="fondo">
+
+            <div class="text-white p-3" :class="{'bg-info' : color, 'bg-success' : !color }">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error facere, voluptate 
+                    perferendis eaque distinctio laudantium deserunt minima provident modi, maiores voluptas debitis! 
+                    Excepturi, vero aspernatur maxime odio sapiente tenetur sunt?</p>
+            </div>
+
+            <button class="btn btn-primary" @click="color = !color">Cambia</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="js/07.js"></script>
+</body>
+</html>
